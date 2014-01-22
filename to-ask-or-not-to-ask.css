@@ -1,0 +1,55 @@
+html, body
+{
+    height: 100%;
+}
+
+body {
+    background: url('background.jpg') #000 center center no-repeat;
+    font-family: 'Freckle Face', cursive;
+    min-height: 100%;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 1700px;
+    height: 714px;
+    margin: auto;
+}
+
+#game {
+    padding: 100px 0 0 0;
+}
+
+.column {
+    width: 15%;
+    height: 400px;
+    background: #CCC;
+    margin: 5px;
+    float: left;
+    padding: 5px;
+}
+
+.row {
+    height: 18%;
+    background-color: red;
+    opacity: 0.6;
+    margin: 1% 0;
+}
+
+.row.available {
+    background-color: green;
+}
+
+.title {
+    font-weight: bold;
+}

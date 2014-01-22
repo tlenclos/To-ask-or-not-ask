@@ -1,0 +1,40 @@
+<head>
+    <title>To ask or not to nask</title>
+    <link href='http://fonts.googleapis.com/css?family=Freckle+Face' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<h1>To ask or not to ask</h1>
+<div id="main">
+    {{> game}}
+</div>
+</body>
+
+<template name="game">
+    <div id="game">
+        {{> victims_questions}}
+    </div>
+</template>
+
+<template name="victims_questions">
+    {{#each victims}}
+        {{> victim}}
+    {{/each}}
+</template>
+
+<template name="victim">
+    <div class="column">
+        <div class="title">{{name}}</div>
+        {{#each questions}}
+            {{> question}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="question">
+    {{#if status}}
+        <div class="row available"></div>
+    {{else}}
+        <div class="row"></div>
+    {{/if}}
+</template>
