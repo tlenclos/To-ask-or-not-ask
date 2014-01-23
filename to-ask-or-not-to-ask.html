@@ -23,11 +23,17 @@
 </template>
 
 <template name="victim">
-    <div class="column">
-        <div class="title">{{name}}</div>
-        {{#each questions}}
-            {{> question}}
-        {{/each}}
+    <div class="cell">
+        {{#if isAvailable}}
+        <div class="column">
+        {{else}}
+        <div class="column notavailable">
+        {{/if}}
+            <div class="title">{{name}}</div>
+            {{#each questions}}
+                {{> question}}
+            {{/each}}
+        </div>
     </div>
 </template>
 

@@ -31,6 +31,9 @@ if (Meteor.isClient) {
   Template.victim.helpers({
     questions: function() {
       return QuestionsCollection.find({victimId: this._id}).fetch();
+    },
+    isAvailable: function() {
+      return QuestionsCollection.find({victimId: this._id, status: true}).fetch().length > 0;
     }
   });
 

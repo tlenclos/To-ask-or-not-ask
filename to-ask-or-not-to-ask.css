@@ -27,17 +27,28 @@ h1 {
 }
 
 #game {
-    padding: 100px 0 0 0;
+    display: table;
+    padding: 100px 0 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.cell {
+  display: table-cell;
 }
 
 .column {
-    width: 12%;
-    height: 400px;
-    background: #CCC;
-    margin: 10px;
-    float: left;
-    padding: 5px;
+    background: #CCCCCC;
     border-radius: 5px;
+    height: 416px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.column.notavailable {
+    opacity: 0.6;
+    background: #CCCCCC url('answer-all-the-questions.jpg') center bottom no-repeat;
+    background-size: 100% auto;
 }
 
 .row {
@@ -53,5 +64,5 @@ h1 {
 
 .title {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.8em;
 }
