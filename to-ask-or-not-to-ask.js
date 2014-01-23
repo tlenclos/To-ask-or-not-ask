@@ -11,10 +11,10 @@ var reset = function() {
       QuestionsCollection.remove({'_id': item._id});
   });
 
-  var victimsName = ['Steven', 'Thibault', 'Cédric', 'Pierrick', 'Paul', 'Laurent'];
+  var victimsName = ['Steven', 'Thibault', 'Cédric', 'Pierrick', 'Paul', 'Laurent', 'Bruno'];
   _.each(victimsName, function(item, index) {
     var victimId = VictimsCollection.insert({name: item});
-    for(var i=0; i<5; i++) {
+    for(var i=0; i<3; i++) {
       QuestionsCollection.insert({victimId: victimId, status: true});
     }
   });

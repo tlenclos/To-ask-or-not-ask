@@ -31,12 +31,13 @@ h1 {
 }
 
 .column {
-    width: 15%;
+    width: 12%;
     height: 400px;
     background: #CCC;
-    margin: 5px;
+    margin: 10px;
     float: left;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .row {
@@ -52,4 +53,5 @@ h1 {
 
 .title {
     font-weight: bold;
+    font-size: 2em;
 }
